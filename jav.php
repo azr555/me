@@ -52,9 +52,8 @@ echo color("green"," =================================== \n");
 			$uuid = getStr('"resource_owner_id":',',',$verif);
 			echo "\n".color("yellow","+] Your access token : ".$token."\n\n");
 			save("token.txt",$token);
-			echo "\n".color("nevy","?] Redeem Voucher? (Y/N) : ");
-			$pilihan = trim(fgets(STDIN));
-			if($pilihan == "y" || $pilihan == "Y") {
+			
+			
 				echo color("red","===========(REDEEM VOUCHER)===========");
 				echo "\n".color("yellow","!] Claim Voucher GOCAR");
 				echo "\n".color("yellow","!] Please wait");
@@ -161,7 +160,7 @@ echo color("green"," =================================== \n");
 						}
 					}
 				}
-			}
+			
 		} else {
 			echo color("red","x] Seems like the code isn't valid!!! \n");
 			echo color("yellow","!] Please input again \n");
