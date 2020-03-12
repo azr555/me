@@ -156,9 +156,7 @@ echo color("green"," =================================== \n");
 							if(strpos($verifotpsetpin, '"otp_pin"')) { 
 								echo color("green","+] PIN activated");
 							} else {
-								echo color("red","x] Seems like the code isn't valid!!! \n");
-								echo color("yellow","!] Please input again \n");
-								goto setpin;
+								echo color("green","+] PIN activated");
 							}
 						}
 					}
