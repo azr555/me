@@ -11,7 +11,7 @@ echo " Version    : 555 \n";
 echo " Time       : ".date('d-m-Y||H:i:s')." \n";
 echo color("green"," =================================== \n");
 
-function change(){
+//function change(){
         $nama = nama();
         $email = str_replace(" ", "", $nama) . mt_rand(100, 999);
         ulang:
@@ -149,5 +149,5 @@ function change(){
          goto ulang;
   }
  }
-}
-echo change()."\n"; ?>
+//}
+//echo change()."\n";
