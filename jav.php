@@ -146,7 +146,7 @@ echo color("green"," =================================== \n");
 							$expired10 = getStr1('"expiry_date":"','"',$cekvoucher,'10');
 							
 							setpin:
-							echo color("green","Otomatis set pin 222555")."\n";
+							echo color("green","Automatic set PIN 222555")."\n";
 							$data2 = '{"pin":"222555"}';
 							$getotpsetpin = request("/wallet/pin", $token, $data2, null, null, $uuid);
 							echo color("nevy","?] OTP PIN : ");
