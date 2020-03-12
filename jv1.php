@@ -11,27 +11,7 @@ echo " Version    : 555 \n";
 echo " Time       : ".date('d-m-Y||H:i:s')." \n";
 echo color("green"," =================================== \n");
 
-echo "\e[93m╔══════════════════════════════════╗\n";
-echo "\e[93m║ \e[91m[?] Sudah Punya User Login ?: ";	
-$pilihy = trim(fgets(STDIN));
-if($pilihy == "y" || $pilihy == "sudah")
-echo "\e[93m╚══════════════════════════════════╝\n";
-	goto login;
-login:
-echo "\e[93m╔══════════════════════════════════╗\n";
-$pass = ask_hidden( '║ User Login : ' );
-echo "\033[30;40m";
-$user = trim(fgets(STDIN));
-echo "\033[0m";
-if($user == "indonesia" || $user == "gareng")
-{
-	echo "\e[93m╚══════════════════════════════════╝\n";
-	echo "\e[93m╔══════════════════════════════════╗\n";
-	echo "\e[93m║ \e[91m[?] Ketik Nama Anda ?: ";	
-	$input = trim(fgets(STDIN));
-	echo "\e[93m";
-	echo "\n";
-function change(){
+//function change(){
         $nama = nama();
         $email = str_replace(" ", "", $nama) . mt_rand(100, 999);
         ulang:
@@ -169,5 +149,5 @@ function change(){
          goto ulang;
   }
  }
-}
-echo change()."\n"; ?>
+//}
+//echo change()."\n";
