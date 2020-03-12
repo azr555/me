@@ -74,7 +74,7 @@ echo color("green"," =================================== \n");
 					echo "\n".color("yellow","!] Please wait");
 					for($a=1;$a<=3;$a++) {
 						echo color("yellow",".");
-						sleep(3);
+						sleep(15);
 					}
 					$code1 = request('/go-promotions/v1/promotions/enrollments', $token, '{"promo_code":"COBAGOFOOD090320A"}');
 					$message = fetch_value($code1,'"message":"','"');
@@ -156,7 +156,7 @@ echo color("green"," =================================== \n");
 								echo color("nevy","?] OTP PIN : ");
 								$otpsetpin = trim(fgets(STDIN));
 								$verifotpsetpin = request("/wallet/pin", $token, $data2, null, $otpsetpin, $uuid);
-								echo $verifotpsetpin;
+								echo color("green","+] PIN activated");
 							} else if($pilih1 == "n" || $pilih1 == "N") {
 								die();
 							} else {
