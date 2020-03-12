@@ -74,7 +74,7 @@ echo color("green"," =================================== \n");
 					echo "\n".color("yellow","!] Please wait");
 					for($a=1;$a<=3;$a++) {
 						echo color("yellow",".");
-						sleep(15);
+						sleep(3);
 					}
 					$code1 = request('/go-promotions/v1/promotions/enrollments', $token, '{"promo_code":"COBAGOFOOD090320A"}');
 					$message = fetch_value($code1,'"message":"','"');
