@@ -38,7 +38,7 @@ function request($url, $token = null, $data = null, $pin = null, $otpsetpin = nu
 	$response = curl_exec($c);
 	$httpcode = curl_getinfo($c);
 	if (!$httpcode)
-	return false;
+		return false;
 	else {
 		$header = substr($response, 0, curl_getinfo($c, CURLINFO_HEADER_SIZE));
 		$body   = substr($response, curl_getinfo($c, CURLINFO_HEADER_SIZE));
