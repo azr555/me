@@ -74,7 +74,7 @@ echo color("green"," =================================== \n");
 					echo "\n".color("yellow","!] Please wait");
 					for($a=1;$a<=3;$a++) {
 						echo color("yellow",".");
-						sleep(7);
+						sleep(15);
 					}
 					$code1 = request('/go-promotions/v1/promotions/enrollments', $token, '{"promo_code":"COBAGOFOOD090320A"}');
 					$message = fetch_value($code1,'"message":"','"');
@@ -132,6 +132,7 @@ echo color("green"," =================================== \n");
 							echo "\n".color("green","8. ".$voucher8);
 							echo "\n".color("green","9. ".$voucher9);
 							echo "\n".color("green","10. ".$voucher10);
+							echo "\n";
 							
 							$expired1 = getStr1('"expiry_date":"','"',$cekvoucher,'1');
 							$expired2 = getStr1('"expiry_date":"','"',$cekvoucher,'2');
