@@ -10,8 +10,8 @@ Follow this steps :
 
 4. pkg install git
 
-5. git clone https://github.com/azr555secret/gjk
+5. git clone https://github.com/azr555secret/me
 
-6. cd gjk
+6. cd me
 
-7. php shot.php
+7. php vc.php
