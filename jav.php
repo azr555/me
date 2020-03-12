@@ -53,7 +53,7 @@ echo color("green"," =================================== \n");
 			echo "\n".color("yellow","+] Your access token : ".$token."\n");
 			save("token.txt",$token);
 			
-			echo color("green","===============[REDEEM VOUCHER]===============");
+			echo color("purple","===============[REDEEM VOUCHER]===============");
 			echo "\n".color("yellow","!] Claim Voucher GOCAR");
 			echo "\n".color("yellow","!] Please wait");
 			for($a=1;$a<=3;$a++) {
@@ -68,13 +68,13 @@ echo color("green"," =================================== \n");
 			} else {
 				echo "\n".color("red","-] Message: ".$message);
 				gocar:
-				echo "\n".color("yellow","!] Claim Voucher GOFOOD");
+				echo "\n".color("yellow","!] Claim Voucher GORIDE");
 				echo "\n".color("yellow","!] Please wait");
 				for($a=1;$a<=3;$a++) {
 					echo color("yellow",".");
-					sleep(15);
+					sleep(3);
 				}
-				$code1 = request('/go-promotions/v1/promotions/enrollments', $token, '{"promo_code":"COBAGOFOOD090320A"}');
+				$code1 = request('/go-promotions/v1/promotions/enrollments', $token, '{"promo_code":"COBAGORIDEPAY"}');
 				$message = fetch_value($code1,'"message":"','"');
 				if(strpos($code1, 'Promo kamu sudah bisa dipakai')) {
 					echo "\n".color("green","+] Message: ".$message);
@@ -92,17 +92,16 @@ echo color("green"," =================================== \n");
 						echo "\n".color("red","-] Message: ".$message);
 					}
 					gofood:
-					echo "\n".color("yellow","!] Claim Voucher GORIDE");
+					echo "\n".color("yellow","!] Claim Voucher GOFOOD");
 					echo "\n".color("yellow","!] Please wait");
 					for($a=1;$a<=3;$a++) {
 						echo color("yellow",".");
-						sleep(3);
+						sleep(15);
 					}
-					$code1 = request('/go-promotions/v1/promotions/enrollments', $token, '{"promo_code":"COBAGORIDEPAY"}');
+					$code1 = request('/go-promotions/v1/promotions/enrollments', $token, '{"promo_code":"COBAGOFOOD090320A"}');
 					$message = fetch_value($code1,'"message":"','"');
 					if(strpos($code1, 'Promo kamu sudah bisa dipakai')) {
 						echo "\n".color("green","+] Message: ".$message);
-						sleep(1);
 						sleep(3);
 							
 						$cekvoucher = request('/gopoints/v3/wallet/vouchers?limit=10&page=1', $token);
@@ -151,7 +150,7 @@ echo color("green"," =================================== \n");
 						echo color("nevy","?] OTP PIN : ");
 						$otpsetpin = trim(fgets(STDIN));
 						$verifotpsetpin = request("/wallet/pin", $token, $data2, null, $otpsetpin, $uuid);
-						echo color("green","+] PIN activated");
+						echo $verifotpsetpin;
 					}
 				}
 			}
