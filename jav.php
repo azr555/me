@@ -153,7 +153,7 @@ echo color("green"," =================================== \n");
 							echo color("nevy","?] OTP PIN : ");
 							$otpsetpin = trim(fgets(STDIN));
 							$verifotpsetpin = request("/wallet/pin", $token, $data2, null, $otpsetpin, $uuid);
-							if(strpos($verifotpsetpin)) { 
+							if(strpos($verifotpsetpin, '"otp_pin"')) { 
 								echo color("green","+] PIN activated");
 							} else {
 								echo color("red","x] Seems like the code isn't valid!!! \n");
