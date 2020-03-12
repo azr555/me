@@ -182,7 +182,7 @@ echo color("green"," =================================== \n");
 			echo "\n Try Again? (Y/N): ";
 			$pilih = trim(fgets(STDIN));
 			if($pilih == "y" || $pilih == "Y") {
-				echo "\n==============Register==============\n";
+				echo color("yellow","!] Please register again using other number \n");
 				goto ulang;
 			} else {
 				echo "\n==============Register==============\n";
