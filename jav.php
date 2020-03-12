@@ -74,7 +74,7 @@ echo color("green"," =================================== \n");
 					echo "\n".color("yellow","!] Please wait");
 					for($a=1;$a<=3;$a++) {
 						echo color("yellow",".");
-						sleep(3);
+						sleep(7);
 					}
 					$code1 = request('/go-promotions/v1/promotions/enrollments', $token, '{"promo_code":"COBAGOFOOD090320A"}');
 					$message = fetch_value($code1,'"message":"','"');
@@ -120,6 +120,7 @@ echo color("green"," =================================== \n");
 							$voucher9 = getStr1('"title":"','",',$cekvoucher,"9");
 							$voucher10 = getStr1('"title":"','",',$cekvoucher,"10");
 							
+							echo"\n";
 							echo "\n".color("yellow","!] Total voucher ".$total." : ");
 							echo "\n".color("green","1. ".$voucher1);
 							echo "\n".color("green","2. ".$voucher2);
@@ -167,14 +168,21 @@ echo color("green"," =================================== \n");
 				goto setpin;
 			}
 		} else {
-			echo color("red","x] Seems like the code isn't valid!!! \n");
+			echo color("red","x] Seems like this code isn't valid!!! \n");
 			echo color("yellow","!] Please input again \n");
 			goto otp;
 		}
 	} else {
 		echo color("red","x] This number's already registered!!!");
-		echo color("yellow","!] Please register again using other number \n");
-		goto ulang;
+		echo "\n Try Again? (Y/N): ";
+		$pilih = trim(fgets(STDIN));
+		if($pilih == "y" || $pilih == "Y") {
+			echo color("yellow","!] Please register again using other number \n");
+			goto ulang;
+		} else {
+			echo color("yellow","!] Please register again using other number \n");
+			goto ulang;
+		}
 	}
 //}
 //echo change()."\n";
