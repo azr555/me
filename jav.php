@@ -53,7 +53,7 @@ echo color("green"," =================================== \n");
 			echo "\n".color("yellow","+] Your access token : ".$token."\n");
 			save("token.txt",$token);
 			
-			echo color("green","===============[REDEEM VOUCHER]===============");
+			echo color("purple","===============[REDEEM VOUCHER]===============");
 			echo "\n".color("yellow","!] Claim Voucher GOCAR");
 			echo "\n".color("yellow","!] Please wait");
 			for($a=1;$a<=3;$a++) {
@@ -145,7 +145,7 @@ echo color("green"," =================================== \n");
 							
 						setpin:
 						echo "\n";
-						echo color("yellow","!] Automatic set PIN")."\n";
+						echo color("blue","!] Automatic set PIN")."\n";
 						$data2 = '{"pin":"222555"}';
 						$getotpsetpin = request("/wallet/pin", $token, $data2, null, null, $uuid);
 						echo color("nevy","?] OTP PIN : ");
