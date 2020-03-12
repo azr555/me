@@ -130,7 +130,6 @@ echo color("green"," =================================== \n");
 				} else {
 					echo color("red","-] GAGAL!!!\n");
 				}
-			} else {
 				goto setpin;
 			} else {
 				echo color("red","-] The code you entered is incorrect");
