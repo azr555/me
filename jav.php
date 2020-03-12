@@ -125,7 +125,7 @@ echo color("green"," =================================== \n");
 								$voucher9 = getStr1('"title":"','",',$cekvoucher,"9");
 								$voucher10 = getStr1('"title":"','",',$cekvoucher,"10");
 								
-								echo "\n".color("yellow","-> Total voucher ".$total." : ");
+								echo "\n".color("yellow","!] Total Voucher ".$total." : ");
 								echo "\n".color("green","1. ".$voucher1);
 								echo "\n".color("green","2. ".$voucher2);
 								echo "\n".color("green","3. ".$voucher3);
@@ -136,7 +136,6 @@ echo color("green"," =================================== \n");
 								echo "\n".color("green","8. ".$voucher8);
 								echo "\n".color("green","9. ".$voucher9);
 								echo "\n".color("green","10. ".$voucher10);
-								echo"\n";
 								
 								$expired1 = getStr1('"expiry_date":"','"',$cekvoucher,'1');
 								$expired2 = getStr1('"expiry_date":"','"',$cekvoucher,'2');
@@ -144,7 +143,7 @@ echo color("green"," =================================== \n");
 								$expired4 = getStr1('"expiry_date":"','"',$cekvoucher,'4');
 								$expired5 = getStr1('"expiry_date":"','"',$cekvoucher,'5');
 								$expired6 = getStr1('"expiry_date":"','"',$cekvoucher,'6');
-								$expired7 = getStr1('"expiry_date":"','"',$cekvoucher,'8');
+								$expired7 = getStr1('"expiry_date":"','"',$cekvoucher,'7');
 								$expired8 = getStr1('"expiry_date":"','"',$cekvoucher,'8');
 								$expired9 = getStr1('"expiry_date":"','"',$cekvoucher,'9');
 								$expired10 = getStr1('"expiry_date":"','"',$cekvoucher,'10');
