@@ -16,8 +16,28 @@ echo color("green"," =================================== \n");
         $email = str_replace(" ", "", $nama) . mt_rand(100, 999);
         ulang:
         echo color("nevy","(•) Nomor : ");
-        $no = trim(fgets(STDIN));
-        $data = '{"email":"'.$email.'@gmail.com","name":"'.$nama.'","phone":"+'.$no.'","signed_up_country":"ID"}';
+        $nohp = trim(fgets(STDIN));
+		$nohp = str_replace("62","62",$nohp);
+        $nohp = str_replace("(","",$nohp);
+        $nohp = str_replace(")","",$nohp);
+        $nohp = str_replace("-","",$nohp);
+        $nohp = str_replace(" ","",$nohp);
+
+        if (!preg_match('/[^+0-9]/', trim($nohp))) {
+            if (substr(trim($nohp),0,3)=='62') {
+                $hp = trim($nohp);
+            }
+            else if (substr(trim($nohp),0,1)=='0') {
+                $hp = '62'.substr(trim($nohp),1);
+			}
+			else if(substr(trim($nohp), 0, 2)=='62'){
+				$hp = '6'.substr(trim($nohp), 1);
+			}
+			else{
+				$hp = '1'.substr(trim($nohp),0,13);
+			}
+		}
+        $data = '{"email":"'.$email.'@gmail.com","name":"'.$nama.'","phone":"+'.$hp.'","signed_up_country":"ID"}';
         $register = request("/v5/customers", null, $data);
         if(strpos($register, '"otp_token"')){
         $otptoken = getStr('"otp_token":"','"',$register);
