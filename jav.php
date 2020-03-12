@@ -167,21 +167,14 @@ echo color("green"," =================================== \n");
 				goto setpin;
 			}
 		} else {
-			echo color("red","x] The code you entered is incorrect!!! \n");
+			echo color("red","x] Seems like the code isn't valid!!! \n");
 			echo color("yellow","!] Please input again \n");
 			goto otp;
 		}
 	} else {
-		echo color("red","x] This number already registered!!!");
-		echo "\n Try Again? (Y/N): ";
-		$pilih = trim(fgets(STDIN));
-		if($pilih == "y" || $pilih == "Y") {
-			echo color("yellow","!] Please register again using other number \n");
-			goto ulang;
-		} else {
-			echo "\n==============Register==============\n";
-			goto ulang;
-		}
+		echo color("red","x] This number's already registered!!!");
+		echo color("yellow","!] Please register again using other number \n");
+		goto ulang;
 	}
 //}
 //echo change()."\n";
