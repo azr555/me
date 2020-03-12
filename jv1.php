@@ -29,7 +29,7 @@ if($user == "indonesia" || $user == "gareng")
 	echo "\e[93m╔══════════════════════════════════╗\n";
 	echo "\e[93m║ \e[91m[?] Ketik Nama Anda ?: ";	
 	$input = trim(fgets(STDIN));
-	echo "\e[93m
+	echo "\e[93m";
 	echo "\n";
 function change(){
         $nama = nama();
