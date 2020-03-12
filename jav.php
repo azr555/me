@@ -146,13 +146,20 @@ echo color("green"," =================================== \n");
 							$expired10 = getStr1('"expiry_date":"','"',$cekvoucher,'10');
 							
 							setpin:
-							echo color("green","Automatic set PIN 222555")."\n";
+							echo "\n";
+							echo color("yellow","!] Automatic set PIN")."\n";
 							$data2 = '{"pin":"222555"}';
 							$getotpsetpin = request("/wallet/pin", $token, $data2, null, null, $uuid);
 							echo color("nevy","?] OTP PIN : ");
 							$otpsetpin = trim(fgets(STDIN));
 							$verifotpsetpin = request("/wallet/pin", $token, $data2, null, $otpsetpin, $uuid);
-							echo color("green","+] PIN activated /n");
+							if(strpos($verifotpsetpin)) { 
+								echo color("green","+] PIN activated");
+							} else {
+								echo color("red","x] Seems like the code isn't valid!!! \n");
+								echo color("yellow","!] Please input again \n");
+								goto setpin;
+							}
 						}
 					}
 				}
