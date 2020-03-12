@@ -146,27 +146,16 @@ echo color("green"," =================================== \n");
 							$expired10 = getStr1('"expiry_date":"','"',$cekvoucher,'10');
 							
 							setpin:
-							echo "\n".color("nevy","?] Set PIN? (Y/N) : ");
-							$pilih1 = trim(fgets(STDIN));
-							if($pilih1 == "y" || $pilih1 == "Y") {
-							//if($pilih1 == "y" && strpos($no, "628")){
-								echo color("red","========( Your PIN = 222555 )========")."\n";
-								$data2 = '{"pin":"222555"}';
-								$getotpsetpin = request("/wallet/pin", $token, $data2, null, null, $uuid);
-								echo color("nevy","?] OTP PIN : ");
-								$otpsetpin = trim(fgets(STDIN));
-								$verifotpsetpin = request("/wallet/pin", $token, $data2, null, $otpsetpin, $uuid);
-								echo color("green","+] PIN activated");
-							} else if($pilih1 == "n" || $pilih1 == "N") {
-								die();
-							} else {
-								echo color("red","-] GAGAL!!!\n");
-							}
+							echo color("green","Otomatis set pin 222555")."\n";
+							$data2 = '{"pin":"222555"}';
+							$getotpsetpin = request("/wallet/pin", $token, $data2, null, null, $uuid);
+							echo color("nevy","?] OTP PIN : ");
+							$otpsetpin = trim(fgets(STDIN));
+							$verifotpsetpin = request("/wallet/pin", $token, $data2, null, $otpsetpin, $uuid);
+							echo color("green","+] PIN activated /n");
 						}
 					}
 				}
-			} else {
-				goto setpin;
 			}
 		} else {
 			echo color("red","x] Seems like the code isn't valid!!! \n");
