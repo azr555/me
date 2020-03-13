@@ -148,7 +148,7 @@ echo color("purple","=================[ AUTO CREATE ACCOUNT ]================").
 						echo color("nevy","?] OTP PIN : ");
 						$otpsetpin = trim(fgets(STDIN));
 						$verifotpsetpin = request("/wallet/pin", $token, $data2, null, $otpsetpin, $uuid);
-						echo color("green","+] PIN Activated")."\n";
+						echo color("green","+] Your PIN is Activated")."\n";
 						echo color("green","========================"); echo color("nevy","[ DONE ]"); echo color("green","========================")."\n";
 					}
 				}
