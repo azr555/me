@@ -3,8 +3,9 @@ date_default_timezone_set('Asia/Jakarta');
 include "func.php";
 
 echo color("green"," ====================================================== \n");
-echo color("green"," Claim Voucher \n");
-echo color("green"," Auto Create & Redeem Voucher \n");
+echo color("green"," ================[ AUTO CREATE ACCOUNT ]=============== \n");
+echo color("green"," ================[ AUTO CLAIM VOUCHERS ]=============== \n");
+echo color("green"," ====================[AUTO SET PIN ]=================== \n");
 echo color("green"," ====================================================== \n");
 echo " Created by : Vino AZR \n";
 echo " Version    : 555 \n";
