@@ -7,7 +7,7 @@ echo color("green","================="); echo color("nevy","[ AUTO CLAIM VOUCHER
 echo color("green","===================="); echo color("nevy","[ AUTO SET PIN ]"); echo color("green","====================")."\n";
 echo color("green"," Created by : Vino AZR")."\n";
 echo color("green"," Version    : 555")."\n";
-echo color("green"," Time       : ".date('[d-m-Y] [H:i:s]').)."\n";
+echo " Time       : ".date('[d-m-Y] [H:i:s]')."\n";
 echo color("purple","=================[ AUTO CREATE ACCOUNT ]================")."\n";
 
 //function change(){
