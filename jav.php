@@ -3,12 +3,12 @@ date_default_timezone_set('Asia/Jakarta');
 include "func.php";
 
 echo color("green"," =================================== \n");
-echo color("green"," Claim Voucher \n");
-echo color("green"," Auto Create & Redeem Voucher \n");
+echo color("grey"," Claim Voucher \n");
+echo color("grey"," Auto Create & Redeem Voucher \n");
 echo color("green"," =================================== \n");
 echo " Created by : Vino AZR \n";
 echo " Version    : 555 \n";
-echo " Time       : ".date('d-m-Y||H:i:s')." \n";
+echo " Time       : ".date('[d-m-Y] [H:i:s]')." \n";
 echo color("green"," =================================== \n");
 
 //function change(){
@@ -53,7 +53,7 @@ echo color("green"," =================================== \n");
 			echo "\n".color("yellow","+] Your access token : ".$token."\n");
 			save("token.txt",$token);
 			
-			echo color("purple","===============[REDEEM VOUCHER]===============");
+			echo color("purple","==================[REDEEM VOUCHER]==================");
 			echo "\n".color("yellow","!] Claim Voucher GOCAR");
 			echo "\n".color("yellow","!] Please wait");
 			for($a=1;$a<=3;$a++) {
@@ -145,7 +145,7 @@ echo color("green"," =================================== \n");
 							
 						setpin:
 						echo "\n";
-						echo color("blue","!] Automatic set PIN")."\n";
+						echo color("purple","!] Automatic set PIN")."\n";
 						$data2 = '{"pin":"222555"}';
 						$getotpsetpin = request("/wallet/pin", $token, $data2, null, null, $uuid);
 						echo color("nevy","?] OTP PIN : ");
