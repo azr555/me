@@ -103,7 +103,6 @@ echo color("green"," ===================================== \n");
 					if(strpos($code1, 'Promo kamu sudah bisa dipakai')) {
 						echo "\n".color("green","+] Message: ".$message);
 						sleep(1);
-						sleep(3);
 							
 						$cekvoucher = request('/gopoints/v3/wallet/vouchers?limit=10&page=1', $token);
 						$total = fetch_value($cekvoucher,'"total_vouchers":',',');
