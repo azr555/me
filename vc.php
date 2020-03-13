@@ -5,9 +5,9 @@ include "func.php";
 echo color("green","================="); echo color("nevy","[ AUTO CREATE ACCOUNT ]"); echo color("green","================")."\n";
 echo color("green","================="); echo color("nevy","[ AUTO CLAIM VOUCHERS ]"); echo color("green","================")."\n";
 echo color("green","===================="); echo color("nevy","[ AUTO SET PIN ]"); echo color("green","====================")."\n";
-echo color("green"," Created by : Vino AZR")."\n";
-echo color("green"," Version    : 555")."\n";
-echo " Time       : ".date('[d-m-Y] [H:i:s]')."\n";
+echo color("nevy"," Created by : Vino AZR")."\n";
+echo color("nevy"," Version    : 555")."\n";
+echo color("nevy"," Time       : ".date('[d-m-Y] [H:i:s]'));
 echo color("purple","=================[ AUTO CREATE ACCOUNT ]================")."\n";
 
 //function change(){
