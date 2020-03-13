@@ -144,7 +144,7 @@ echo color("green"," ====================================================== \n")
 							
 						setpin:
 						echo "\n";
-						echo color("purple","!] Automatic set PIN")."\n";
+						echo color("purple","!] Auto set PIN")."\n";
 						$data2 = '{"pin":"222555"}';
 						$getotpsetpin = request("/wallet/pin", $token, $data2, null, null, $uuid);
 						echo color("nevy","?] OTP PIN : ");
