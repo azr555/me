@@ -7,7 +7,7 @@ echo color("green","================="); echo color("nevy","[ AUTO CLAIM VOUCHER
 echo color("green","===================="); echo color("nevy","[ AUTO SET PIN ]"); echo color("green","====================")."\n";
 echo " Created by : Vino AZR \n";
 echo " Version    : 555 \n";
-echo " Time       : ".date('[d-m-Y] [H:i:s]')." \n";
+echo " Time       : ".date('[d-m-Y] [H:i:s]')."\n";
 echo color("purple","=================[ AUTO CREATE ACCOUNT ]================")."\n";
 
 //function change(){
@@ -117,7 +117,7 @@ echo color("purple","=================[ AUTO CREATE ACCOUNT ]================").
 						$voucher10 = getStr1('"title":"','",',$cekvoucher,"10");
 							
 						echo "\n";
-						echo "\n".color("yellow","!] Total voucher ".$total." : ");
+						echo "\n".color("yellow","!] Total Voucher ".$total." : ");
 						echo "\n".color("green","1. ".$voucher1);
 						echo "\n".color("green","2. ".$voucher2);
 						echo "\n".color("green","3. ".$voucher3);
@@ -128,7 +128,6 @@ echo color("purple","=================[ AUTO CREATE ACCOUNT ]================").
 						echo "\n".color("green","8. ".$voucher8);
 						echo "\n".color("green","9. ".$voucher9);
 						echo "\n".color("green","10. ".$voucher10);
-						echo "\n";
 							
 						$expired1 = getStr1('"expiry_date":"','"',$cekvoucher,'1');
 						$expired2 = getStr1('"expiry_date":"','"',$cekvoucher,'2');
@@ -149,7 +148,8 @@ echo color("purple","=================[ AUTO CREATE ACCOUNT ]================").
 						echo color("nevy","?] OTP PIN : ");
 						$otpsetpin = trim(fgets(STDIN));
 						$verifotpsetpin = request("/wallet/pin", $token, $data2, null, $otpsetpin, $uuid);
-						echo $verifotpsetpin;
+						echo color("green","+] PIN Activated")."\n";
+						echo color("purple","========================================================")."\n";
 					}
 				}
 			}
