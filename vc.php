@@ -10,7 +10,7 @@ echo color("green","======================================================== \n"
 echo " Created by : Vino AZR \n";
 echo " Version    : 555 \n";
 echo " Time       : ".date('[d-m-Y] [H:i:s]')." \n";
-echo color("green"," ======================================================= \n");
+echo color("purple","=================[ AUTO CREATE ACCOUNT ]================ \n");
 
 //function change(){
 	$nama = nama();
@@ -54,7 +54,7 @@ echo color("green"," ======================================================= \n"
 			echo "\n".color("yellow","+] Your access token : ".$token."\n");
 			save("token.txt",$token);
 			
-			echo color("purple","====================[REDEEM VOUCHER]====================");
+			echo color("purple","=================[ AUTO CLAIM VOUCHERS ]================");
 			echo "\n".color("yellow","!] Claim Voucher GOCAR");
 			echo "\n".color("yellow","!] Please wait");
 			for($a=1;$a<=3;$a++) {
@@ -145,7 +145,7 @@ echo color("green"," ======================================================= \n"
 							
 						setpin:
 						echo "\n";
-						echo color("purple","!] Auto set PIN")."\n";
+						echo color("purple","!] =====================[ AUTO SET PIN ]===================")."\n";
 						$data2 = '{"pin":"222555"}';
 						$getotpsetpin = request("/wallet/pin", $token, $data2, null, null, $uuid);
 						echo color("nevy","?] OTP PIN : ");
